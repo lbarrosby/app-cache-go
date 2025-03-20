@@ -4,7 +4,6 @@ import (
     "fmt"
     "log"
     "time"
-    "net/http"
 
     "github.com/gin-gonic/gin"
     "github.com/go-redis/redis/v8"
