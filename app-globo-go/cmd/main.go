@@ -27,12 +27,12 @@ func main() {
 
 	// Rota que retorna um texto fixo, cacheado por 10 segundos
 	router.GET("/texto_fixo", middleware.CacheMiddleware(10*time.Second), func(c *gin.Context) {
-		c.String(200, "Texto fixo!")
+		c.String(200, "Texto fixo Golang!")
 	})
 
 	// Rota que retorna o horário atual, cacheado por 1 minuto
 	router.GET("/hora", middleware.CacheMiddleware(1*time.Minute), func(c *gin.Context) {
-		c.String(200, fmt.Sprintf("Horário atual: %s", time.Now().Format(time.RFC1123)))
+		c.String(200, fmt.Sprintf("Horário atual: %s Golang", time.Now().Format(time.RFC1123)))
 	})
 
 	// Inicia o servidor na porta 8080
